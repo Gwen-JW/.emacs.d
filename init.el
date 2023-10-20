@@ -24,6 +24,7 @@
 (setq confirm-kill-emacs #'yes-or-no-p)
 (electric-pair-mode t)
 (setq inhibit-startup-screen t)
+(setq make-backup-files nil)
 (global-display-line-numbers-mode 1)
 
 (require 'package)
