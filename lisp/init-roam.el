@@ -1,10 +1,7 @@
-;; -*- lexical-binding: t; -*-
+;;; init-roam.el --- Org-roam config -*- lexical-binding: t -*-
+;;; Commentary:
 
-(use-package org-modern
-  :config
-  (global-org-modern-mode)
-  ;; (set-face-attribute 'org-modern-symbol nil :family "Iosevka"))
-  (set-face-attribute 'org-modern-symbol nil :family "Roboto Mono"))
+;;; Code:
 
 (use-package org-roam
   :diminish
