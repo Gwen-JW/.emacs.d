@@ -28,8 +28,7 @@
 (global-display-line-numbers-mode 1)
 
 (require 'init-package)
-;; (require 'init-org)
-(require 'org)
+(require 'init-org)
 (require 'init-roam)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
