@@ -27,14 +27,9 @@
 (setq make-backup-files nil)
 (global-display-line-numbers-mode 1)
 
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
-(eval-when-compile
-  (require 'use-package))
-
-(require 'init-org)
+(require 'init-package)
+;; (require 'init-org)
+(require 'org)
 (require 'init-roam)
 (when *spell-check-support-enabled*
   (require 'init-spelling))
