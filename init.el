@@ -26,8 +26,15 @@
 (setq inhibit-startup-screen t)
 (setq make-backup-files nil)
 (global-display-line-numbers-mode 1)
+;;(tool-bar-mode -1)
+(scroll-bar-mode -1)
+(setq-default line-spacing 0.2)
 
 (require 'init-package)
+(require 'init-font)
+(require 'init-theme)
+(require 'init-minibuffer)
+(require 'init-utils)
 (require 'init-org)
 (require 'init-roam)
 (when *spell-check-support-enabled*
@@ -42,7 +49,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(org-agenda writeroom-mode paradox org-roam-ui org-modern org-download markdown-mode consult-org-roam)))
+   '(which-key embark marginalia vertico orderless minibuffer nord-theme org-agenda writeroom-mode paradox org-roam-ui org-modern org-download markdown-mode consult-org-roam)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
