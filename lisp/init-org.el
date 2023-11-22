@@ -25,8 +25,8 @@
   ;; Directories settings
   (when (file-directory-p "~/Documents/gtd/")
     (setq org-agenda-files (list "~/Documents/gtd/")))
-  (setq org-agenda-skip-deadline-if-done t)
-  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-if-done nil)
+  (setq org-agenda-skip-scheduled-if-done nil)
   (setq org-agenda-start-on-weekday nil)
   (setq org-deadline-warning-days 16)
   (setq org-use-speed-commands t)
@@ -37,7 +37,8 @@
           (sequence "|" "CANCELED(c)" "DELEGATED(l)" "SOMEDAY(f)")
           (sequence "|" "READ(r)")
           (sequence "|" "BLOG(b)")
-          (sequence "|" "IDEA(i)")	  
+          (sequence "|" "IDEA(i)")
+	  (sequence "|" "WANNA(a)")
 	  ))
 
   ;; my agenda view contains follow items:
@@ -63,7 +64,10 @@
 	    (todo "READ"
 		  ((org-agenda-overriding-header "Reading List:")))
 	    (todo "BLOG"
-		  ((org-agenda-overriding-header "Blogs:")))))))
+		  ((org-agenda-overriding-header "Blogs:")))
+	    (todo "WANNA"
+		  ((org-agenda-overriding-header "All we wanna do:")))
+	    ))))
 
   ;; org capture
   (defvar org-capture-templates nil
@@ -86,6 +90,11 @@
 				("b" "Blog"
 				 entry (file+headline "~/Documents/gtd/blog.org" "Blogs")
 				 "* BLOG %?\nAdded: %U\n"
+				 :prepend t
+				 :kill-buffer t)
+				("a" "Wanna"
+				 entry (file+headline "~/Documents/gtd/wanna.org" "Wanna do")
+				 "* WANNA %?\nAdded: %U\n"
 				 :prepend t
 				 :kill-buffer t))))
 
