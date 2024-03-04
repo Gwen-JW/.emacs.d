@@ -28,7 +28,9 @@
 (global-display-line-numbers-mode 1)
 ;;(tool-bar-mode -1)
 (scroll-bar-mode -1)
+(global-visual-line-mode 1)
 (setq-default line-spacing 0.2)
+(setq-default fringe-indicator-alist (assq-delete-all 'truncation fringe-indicator-alist))
 
 (require 'init-package)
 (require 'init-font)
